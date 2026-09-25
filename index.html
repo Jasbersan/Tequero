@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#fff8dc">
+<title>Un regalito para ti amor 🌼</title>
+<style>
+:root{
+  --cream:#fffaf0; --yellow:#f6c945; --gold:#e9ad22;
+  --green:#789b61; --dark:#514b3e; --pink:#f6d8d3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--dark); font-family: Georgia, "Times New Roman", serif;
+  background:linear-gradient(#fffaf0,#fffdf6); overflow-x:hidden;
+}
+button{font:inherit}
+.hero{
+  min-height:100svh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:32px 20px; position:relative; overflow:hidden;
+  background:radial-gradient(circle at 50% 20%,#fffdf1 0,#fff8df 45%,#f8edc9 100%);
+}
+.hero-content{position:relative;z-index:3;max-width:680px}
+.eyebrow{font:italic 1.05rem;margin-bottom:12px;opacity:.75}
+h1{font-size:clamp(3rem,12vw,6.5rem);line-height:.9;margin:0 0 22px;color:#dba91e;font-weight:500}
+.subtitle{font-size:clamp(1.15rem,4vw,1.55rem);line-height:1.55;margin:auto;max-width:560px}
+.enter{
+  margin-top:30px;border:0;border-radius:999px;padding:14px 24px;
+  background:#e9b92e;color:white;box-shadow:0 8px 25px #c99e2b44;cursor:pointer;
+}
+.enter:active{transform:scale(.97)}
+.flower{position:absolute;font-size:clamp(2rem,8vw,4.5rem);animation:sway 4s ease-in-out infinite}
+.f1{left:7%;bottom:9%}.f2{right:7%;top:12%;animation-delay:1s}.f3{left:18%;top:15%;animation-delay:2s}
+.f4{right:17%;bottom:8%;animation-delay:.5s}
+@keyframes sway{50%{transform:translateY(-12px) rotate(5deg)}}
+section{padding:78px 20px;max-width:1050px;margin:auto}
+.section-title{text-align:center;font-size:clamp(2rem,7vw,3.4rem);font-weight:500;color:#d6a51c;margin:0 0 12px}
+.section-intro{text-align:center;max-width:650px;margin:0 auto 38px;line-height:1.7}
+.memories{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{
+  background:#fff; border-radius:24px; padding:12px; box-shadow:0 10px 30px #82704218;
+  transform:rotate(var(--r)); transition:.25s; cursor:pointer;
+}
+.card:hover{transform:rotate(0) translateY(-5px)}
+.photo{
+  aspect-ratio:1/1; border-radius:17px; display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#fff0a9,#f8d978); color:#8a712b; overflow:hidden;
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.card p{margin:12px 7px 7px;line-height:1.45}
+.card small{opacity:.65}
+.reasons{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px
+}
+.reason{
+  min-height:150px;border-radius:50% 50% 45% 55%;background:#fff4b7;
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;
+  box-shadow:inset 0 0 0 1px #e4bd4d55,0 10px 25px #987b3212;line-height:1.4;
+}
+.grow-wrap{text-align:center}
+.seed-btn{
+  border:0;background:transparent;cursor:pointer;font-size:6rem;transition:.35s;
+}
+.seed-btn:active{transform:scale(.9)}
+.grow-message{max-width:600px;margin:20px auto;line-height:1.8;min-height:80px}
+.letter{
+  background:#fffdf7;border:1px solid #eadba8;border-radius:28px;padding:30px;
+  max-width:760px;margin:auto;box-shadow:0 15px 40px #88773b18;line-height:1.85;
+}
+.signature{text-align:right;font-style:italic;margin-top:25px}
+footer{text-align:center;padding:55px 20px 80px;color:#7d745f}
+.modal{
+  position:fixed;inset:0;background:#302c2188;display:none;align-items:center;justify-content:center;
+  padding:20px;z-index:20;
+}
+.modal.open{display:flex}
+.modal-box{background:#fffdf7;max-width:650px;width:100%;border-radius:28px;padding:20px;position:relative}
+.modal-box img{width:100%;max-height:65svh;object-fit:contain;border-radius:18px}
+.close{position:absolute;right:12px;top:8px;border:0;background:#fff;border-radius:50%;font-size:1.6rem;width:42px;height:42px;cursor:pointer}
+.petal{position:fixed;top:-30px;z-index:10;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:.2}}
+@media(max-width:600px){
+ section{padding:62px 16px}
+ .card{transform:none}
+ .letter{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="flower f1">🌼</div><div class="flower f2">🌻</div>
+  <div class="flower f3">🌼</div><div class="flower f4">🌻</div>
+  <div class="hero-content">
+    <div class="eyebrow">Por el dia de las flores amarillas jijij</div>
+    <h1>Un jardín<br>para ti</h1>
+    <p class="subtitle">Aunque no haya podido darte flores en persona, te queria dedicar un pequeño recuerdo mailov.</p>
+    <button class="enter" onclick="document.querySelector('#jardin').scrollIntoView()">Entra al jardín 🌼</button>
+  </div>
+</header>
+
+<section id="jardin">
+  <h2 class="section-title">Nosotros mailov</h2>
+
+  <div class="memories">
+    <article class="card" style="--r:-1deg" data-img="img/WIN_20260412_20_58_18_Pro.jpg" data-title="Mira que sexys somos" data-text="Rawr">
+      <div class="photo">📷<br></div>
+      <p><b>De vacaciones</b><br><small>Que ganas de pasar otras vacaciones contigo amorchito.</small></p>
+    </article>
+    <article class="card" style="--r:1.5deg" data-img="img\WIN_20260214_16_41_59_Pro.jpg" data-title="Hablo del nigger y Nala" data-text="Boba">
+      <div class="photo">📷<br></div>
+      <p><b>Mira que par de tontos</b><br><small>mas tontos y no nacen.</small></p>
+    </article>
+    <article class="card" style="--r:-2deg" data-img="img\WIN_20260131_13_01_53_Pro.jpg" data-title="Amooor amoooor" data-text="amor te quiero amor">
+      <div class="photo">📷<br></div>
+      <p><b>Dios mio Alberto Einstein</b><br><small>Y estos pelos?</small></p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Pequeñas flores para ti</h2>
+  <p class="section-intro">Hay cosas que no te digo todos los dias :( , por eso tengo que recordarte lo que mas amo de ti.</p>
+  <div class="reasons">
+    <div class="reason">Eres la persona mas graciosa que conozco.</div>
+    <div class="reason">Me entiendes como nadie mas lo hace.</div>
+    <div class="reason">Eres extremadamente hermosa, preciosa y sexy af.</div>
+    <div class="reason">Mantienes esa ilusion de volver a vernos.</div>
+    <div class="reason">Me amas con locura.</div>
+    <div class="reason">Que incluso lejos sigues estando cerquita.</div>
+  </div>
+</section>
+
+<section class="grow-wrap">
+  <h2 class="section-title">Planta una flor 🌱</h2>
+  <p class="section-intro">Pulsa la semillita. Es una pequeña sorpresa.</p>
+  <button class="seed-btn" id="seed" aria-label="Plantar una flor">🌱</button>
+  <div class="grow-message" id="growMessage"></div>
+</section>
+
+<section>
+  <div class="letter">
+    <h2 class="section-title" style="font-size:2.2rem">Una carta para ti 💛</h2>
+    <p>Hoy quería regalarte flores amarillas. Como no puedo estar ahí para entregártelas con mis propias manos, decidí hacerte algo que pudiera quedarse contigo.</p>
+    <p>He guardado aquí algunos recuerdos, algunas palabras y un poquito de todo lo bonito que hemos construido. La distancia puede hacer que no podamos vernos cuando queremos, pero no puede borrar todos esos momentos que son nuestros.</p>
+    <p>Así que cuando veas esta página, acuérdate de que detrás hay un “te quiero”, un recuerdo y muchas ganas de volver a compartir días contigo.</p>
+    <p>Hasta que pueda darte un ramo de verdad, este es mi pequeño jardín para ti.</p>
+    <div class="signature">Con todo mi cariño,<br><b>El amor de tu vida 🌼</b></div>
+  </div>
+</section>
+
+<footer>
+  Para el caramelito mas sabroso del mundo · 25.09 🌼<br>
+  <span>Para siempre tu y yo amor.</span>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="modalImg" alt="">
+    <h2 id="modalTitle"></h2><p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+const cards=document.querySelectorAll('.card');
+const modal=document.getElementById('modal');
+cards.forEach(card=>{
+  const img=card.dataset.img;
+  if(img){
+    const ph=card.querySelector('.photo');
+    ph.innerHTML='<img src="'+img+'" alt="">';
+  }
+  card.addEventListener('click',()=>{
+    const src=card.dataset.img;
+    document.getElementById('modalImg').style.display=src?'block':'none';
+    if(src) document.getElementById('modalImg').src=src;
+    document.getElementById('modalTitle').textContent=card.dataset.title;
+    document.getElementById('modalText').textContent=card.dataset.text;
+    modal.classList.add('open');
+  });
+});
+function closeModal(){modal.classList.remove('open')}
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+
+document.getElementById('seed').addEventListener('click',function(){
+  this.textContent='🌻';
+  this.style.transform='scale(1.2)';
+  document.getElementById('growMessage').innerHTML=
+    '<b>Toma amorcito.</b><br>No es lo que querias pero va con todo mi amor 💛';
+  for(let i=0;i<18;i++){
+    setTimeout(()=>{
+      const p=document.createElement('div');
+      p.className='petal'; p.textContent=['🌼','🌸','✿'][Math.floor(Math.random()*3)];
+      p.style.left=Math.random()*100+'vw';
+      p.style.fontSize=(14+Math.random()*18)+'px';
+      p.style.animationDuration=(4+Math.random()*4)+'s';
+      document.body.appendChild(p);
+      setTimeout(()=>p.remove(),8000);
+    },i*90);
+  }
+});
+</script>
+</body>
+</html>
